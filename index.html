@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Soul Painter</title>
+	<style>
+		.container{
+			width: 500px;
+			margin:0 auto;
+		}
+		#canvas{
+			border: 1px solid #999;
+			margin-bottom: 10px;
+		}
+		.control .item{
+			display: inline-block;
+		}
+		img{
+			display: inline-block;
+			width: 20px;
+			border: 1px solid #999;
+			padding: 3px;
+			margin-right: 3px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<canvas width="500" height="500" id="canvas"></canvas>
+		<div class="control">
+		<div class="tool item">
+			Tool:
+			<img src="./assets/line.png" alt="line">
+			<img src="./assets/erase.png" alt="erase">
+			<img src="./assets/text.png" alt="text">
+		</div>
+		<div class="color item">
+			Color:<input type="color" id="color">
+		</div>
+		<div class="lineWidth item">
+			Line Width:
+			<select name="lineWidth" id="lineWidth">
+				<option value="3">3</option>
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="40">40</option>
+			</select>
+		</div>
+		<div class="clear item">
+			Clear:
+			<img src="./assets/clear.png" alt="clear">
+		</div>
+		</div>
+	</div>
+	
+<script src="./index.js"></script>
+</body>
+</html>
