@@ -70,10 +70,12 @@ tools.Earse = function(event, cx){
 
 tools.Text = function(event, cx){
 	var text = prompt("Text: ", "")
-	pos = relativePos(event, cx.canvas)
-	cx.textBaseline = "top"
-	cx.font = Math.max(7,cx.lineWidth)+"px san-serif"
-	cx.fillText(text,pos.x,pos.y)
+	if(text){
+		pos = relativePos(event, cx.canvas)
+		cx.textBaseline = "top"
+		cx.font = Math.max(7,cx.lineWidth)+"px san-serif"
+		cx.fillText(text,pos.x,pos.y)
+	}
 }
 
 
