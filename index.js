@@ -49,7 +49,7 @@ controls.tool = function(cx){
 	})
 }
 
-tools.Line = function(event, cx){
+tools.Line = function(event, cx, onEnd){
 	cx.lineCap = "round"
 	var pos = relativePos(event, cx.canvas)
 	trackDrag(function(event){
@@ -58,7 +58,7 @@ tools.Line = function(event, cx){
 		pos = relativePos(event, cx.canvas)
 		cx.lineTo(pos.x, pos.y)
 		cx.stroke()
-	}, null, cx)
+	}, onEnd, cx)
 }
 
 tools.Earse = function(event, cx){
